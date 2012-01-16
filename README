@@ -5,5 +5,5 @@ usage: uulm
 
 Without any option the script logs into the network and -d disconnects
 from the network.
-In order for the script to work you need to assign the variable user
-your username.
+In order for the script to work you need to assign your login name to
+the variable user.
