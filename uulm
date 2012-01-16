@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Logout
+if [ "X$1" = "X-d" ] ; then
+	curl -ks --data "logout=Logout"\
+	    https://welcome.uni-ulm.de/capo/logout.html > /dev/null
+	exit 0
+fi
+
+# Login
+user=INSERT_USERNAME
+
+echo -n "Password: "
+stty -echo
+read pw
+stty echo
+echo
+
+curl -ks --data "username=${user}&password=${pw}&login=Login"\
+    https://welcome.uni-ulm.de/capo/ > /dev/null
